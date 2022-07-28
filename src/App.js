@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -5,24 +7,37 @@ import {
   Link
 } from 'react-router-dom';
 
-// test commit
-
-
 import './App.css';
-import Component from './components/Component';
+
+import Pins from './components/Pins';
 
 export default function App() {
+  const [countries, setCountries] = useState([])
+
+  useEffect(() => {
+    if (!countries.length ) {
+      fetch("http://localhost:4000/countries")
+        .then(resp => resp.json())
+        .then(data => setCountries(data))
+    }
+  }, [countries])
+
   return (
     <Router>
       <header>
         <h1>Title</h1>
-        <Link to="/comp">Show Component</Link>
+        <Link to="/pins">Go to pins</Link>
       </header>
       <main>
         <Routes>
           <Route
-            path='/comp'
-            element={<Component />}
+            path='/pins'
+            element={
+              <Pins
+                countries={countries}
+                setCountries={setCountries}
+              />
+            }
           />
         </Routes>
       </main>

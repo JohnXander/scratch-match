@@ -1,34 +1,50 @@
 {
+    "user": {
+        "firstName": "John",
+        "lastName": "Xander"
+    },
     "countries": [
         {
             "id": 1,
             "name": "Cambodia",
-            "year": 2015
+            "year": 2015,
+            "x": 50,
+            "y": 50
         },
         {
             "id": 2,
             "name": "Vietnam",
-            "year": 2016
+            "year": 2016,
+            "x": 75,
+            "y": 75
         },
         {
             "id": 3,
             "name": "Myanmar",
-            "year": 2016
+            "year": 2016,
+            "x": 100,
+            "y": 100
         },
         {
             "id": 4,
             "name": "Indonesia",
-            "year": 2017
+            "year": 2017,
+            "x": 125,
+            "y": 125
         },
         {
             "id": 5,
             "name": "Malaysia",
-            "year": 2017
+            "year": 2017,
+            "x": 150,
+            "y": 150
         },
         {
             "id": 6,
             "name": "Thailand",
-            "year": 2018
+            "year": 2018,
+            "x": 175,
+            "y": 175
         }
     ]
 }
