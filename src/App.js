@@ -9,32 +9,38 @@ import {
 
 import './App.css';
 
-import Pins from './components/Pins';
+import PinList from './components/PinList';
 
 export default function App() {
   const [countries, setCountries] = useState([])
+  const [user, setUser] = useState([])
 
   useEffect(() => {
     if (!countries.length ) {
       fetch("http://localhost:4000/countries")
         .then(resp => resp.json())
         .then(data => setCountries(data))
+      
+      fetch("http://localhost:4000/user")
+        .then(resp => resp.json())
+        .then(data => setUser(data))
     }
   }, [countries])
 
   return (
     <Router>
       <header>
-        <h1>Title</h1>
-        <Link to="/pins">Go to pins</Link>
+        <h1>🌎Scratch Match</h1>
+        <Link to="/pins">My Scratch Map</Link>
       </header>
       <main>
         <Routes>
           <Route
             path='/pins'
             element={
-              <Pins
+              <PinList
                 countries={countries}
+                user={user}
                 setCountries={setCountries}
               />
             }
