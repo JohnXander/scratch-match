@@ -91,11 +91,46 @@
       "y": 288
     },
     {
+      "id": "hr",
+      "name": "Croatia",
+      "year": 2012,
+      "x": 325,
+      "y": 203
+    },
+    {
+      "id": "eg",
+      "name": "Egypt",
+      "year": 2012,
+      "x": 363,
+      "y": 245
+    },
+    {
+      "id": "fr",
+      "name": "France",
+      "year": 2012,
+      "x": 296,
+      "y": 196
+    },
+    {
+      "id": "gr",
+      "name": "Greece",
+      "year": 2012,
+      "x": 342,
+      "y": 223
+    },
+    {
       "id": "id",
       "name": "Indonesia",
       "year": 2012,
       "x": 540,
       "y": 340
+    },
+    {
+      "id": "it",
+      "name": "Italy",
+      "year": 2012,
+      "x": 322,
+      "y": 210
     },
     {
       "id": "kz",
@@ -126,6 +161,20 @@
       "y": 193
     },
     {
+      "id": "me",
+      "name": "Montenegro",
+      "year": 2012,
+      "x": 332,
+      "y": 209
+    },
+    {
+      "id": "ma",
+      "name": "Morocco",
+      "year": 2012,
+      "x": 282,
+      "y": 234
+    },
+    {
       "id": "mm",
       "name": "Myanmar",
       "year": 2012,
@@ -147,6 +196,13 @@
       "y": 225
     },
     {
+      "id": "es",
+      "name": "Spain",
+      "year": 2012,
+      "x": 286,
+      "y": 216
+    },
+    {
       "id": "th",
       "name": "Thailand",
       "year": 2012,
@@ -166,6 +222,20 @@
       "year": 2012,
       "x": 410,
       "y": 257
+    },
+    {
+      "id": "uk",
+      "name": "UK",
+      "year": 2012,
+      "x": 292,
+      "y": 182
+    },
+    {
+      "id": "us",
+      "name": "USA",
+      "year": 2012,
+      "x": 105,
+      "y": 225
     },
     {
       "id": "uz",

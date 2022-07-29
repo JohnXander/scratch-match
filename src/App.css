@@ -1,4 +1,7 @@
-.map-container{
+/* My Scratch Map */
+
+.map-container,
+.form-container{
     display: flex;
     justify-content: center;
 }
@@ -28,6 +31,31 @@
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
 }
+
+/* Add Pins */
+
+.form-container h2{
+    text-align: center;
+}
+
+.form-container div{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.add-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    padding: 2rem 5rem;
+    border-radius: 3px;
+}
+
 
 
 

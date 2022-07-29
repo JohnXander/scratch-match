@@ -1,12 +1,14 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function PinAdd({ countries, setCountries, world }){ 
-    const [newPin, setNewPin] = useState({})
+export default function PinAdd({ countries, setCountries, world, setNotification }){ 
+    const [newPin, setNewPin] = useState({name: 'Bulgaria', year: '2012'})
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        console.log(newPin)
 
         const selected = world.find(x => x.name === newPin.name)
         selected.year = newPin.year
@@ -20,41 +22,56 @@ export default function PinAdd({ countries, setCountries, world }){
             body: JSON.stringify(selected)
         })
             .then(resp => resp.json())
-            .then(_ => setCountries(updatedCountries))
+            .then(_ => {
+                setNotification(newPin.name)
+                setCountries(updatedCountries)
+            })
         
         navigate("/map")
     }
     
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Add a pin</h2>
+        <div className="form-container">
+            <form onSubmit={handleSubmit} className="add-form">
+                <h2>Add a pin</h2>
 
-            <label htmlFor="name">Country Name</label>
-            <select
-                id="name"
-                name="name"
-                onChange={e => setNewPin({...newPin, name: e.target.value})}
-                style={{ width: "200px" }}>
-                {world.map((country, i) => {
-                    const { name } = country
-                    return <option key={i} value={name}>{name}</option>
-                })}
-            </select>
+                <div>
+                    <label htmlFor="name">Country Name</label>
+                    <select
+                        id="name"
+                        name="name"
+                        onChange={e => setNewPin({...newPin, name: e.target.value})}
+                        style={{ width: "200px" }}>
+                        {world.map((country, i) => {
+                            const { name } = country
+                            return (
+                                <option key={i} value={name}>{name}</option>
+                            )
+                        })}
+                    </select>
+                </div>
 
-            <label htmlFor="year">Year Visited</label>
-            <input
-                id="year"
-                name="year"
-                type="number"
-                min={1922}
-                max={2022}
-                defaultValue={2012}
-                onChange={e => setNewPin({...newPin, year: e.target.value})}
-                required
-            />
+                <div>
+                    <label htmlFor="year">Year Visited</label>
+                    <input
+                        id="year"
+                        name="year"
+                        type="number"
+                        min={1922}
+                        max={2022}
+                        defaultValue={2012}
+                        minLength={4}
+                        maxLength={4}
+                        style={{ width: "100px" }}
+                        onChange={e => setNewPin({...newPin, year: e.target.value})}
+                        required
+                    />
+                </div>
 
-            <button type="submit">Add</button>
-
-        </form>
+                <div>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
     )
 }

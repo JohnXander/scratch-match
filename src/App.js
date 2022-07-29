@@ -16,6 +16,7 @@ export default function App() {
   const [countries, setCountries] = useState([])
   const [user, setUser] = useState([])
   const [world, setWorld] = useState([])
+  const [addNotify, setAddNotify] = useState("")
 
   useEffect(() => {
     if (!countries.length ) {
@@ -33,6 +34,11 @@ export default function App() {
     }
   }, [countries])
 
+  const setNotification = (country) => {
+    setAddNotify(country)
+    setTimeout(() => setAddNotify(""), 5000)
+  }
+
   return (
     <Router>
       <header>
@@ -40,6 +46,7 @@ export default function App() {
         <Link to="/map">My Scratch Map</Link>
         {" "}
         <Link to="/add">Add Pins</Link>
+        {addNotify && <p>{addNotify} was added!</p>}
       </header>
       <main>
         <Routes>
@@ -59,6 +66,7 @@ export default function App() {
                 countries={countries}
                 setCountries={setCountries}
                 world={world}
+                setNotification={setNotification}
               />
             }
           />
