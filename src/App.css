@@ -1,7 +1,15 @@
 /* Home */
 
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+}
 
-
+.notify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* My Scratch Map */
 

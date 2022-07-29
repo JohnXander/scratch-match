@@ -10,6 +10,7 @@ import './App.css';
 
 import PinList from './components/PinList';
 import PinManage from './components/PinManage';
+import SignUp from './components/SignUp';
 
 export default function App() {
   const [countries, setCountries] = useState([])
@@ -19,7 +20,7 @@ export default function App() {
   const [action, setAction] = useState("")
 
   useEffect(() => {
-    if (!countries.length ) {
+    if (!countries.length) {
       fetch("http://localhost:4000/countries")
         .then(resp => resp.json())
         .then(data => setCountries(data))
@@ -42,15 +43,28 @@ export default function App() {
 
   return (
     <Router>
-      <header style={{height: "100px"}}>
+      <header style={{height: "125px"}}>
         <h1>🌎Scratch Match</h1>
-        <Link to="/map">My Scratch Map</Link>
-        {" "}
-        <Link to="/manage">Manage Pins</Link>
-        {notify && <p>{notify} was {action}!</p>}
+        <div className='nav-bar'>
+          <Link to="/map">Scratch Map</Link>
+          {" "}
+          <Link to="/manage">Manage Pins</Link>
+          {" "}
+          <Link to="/signup">Sign Up</Link>
+        </div>
+        <div className='notify'>
+          {notify && <p>{notify} was {action}!</p>}
+        </div>
       </header>
       <main>
         <Routes>
+          <Route
+            path='/signup'
+            element={<SignUp
+              user={user}
+              setUser={setUser}
+            />}
+          />
           <Route
             path='/map'
             element={
