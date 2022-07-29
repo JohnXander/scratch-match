@@ -19,6 +19,8 @@
 }
 
 .hover-block{
+    position: absolute;
+    z-index: 1;
     background-color: blue;
     color: #fff;
     font-size: 0.8rem;

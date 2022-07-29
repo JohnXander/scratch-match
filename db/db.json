@@ -1,50 +1,185 @@
 {
-    "user": {
-        "firstName": "John",
-        "lastName": "Xander"
+  "user": {
+    "firstName": "John",
+    "lastName": "Xander"
+  },
+  "countries": [
+    {
+      "id": "kh",
+      "name": "Cambodia",
+      "year": 2015,
+      "x": 528,
+      "y": 288
     },
-    "countries": [
-        {
-            "id": 1,
-            "name": "Cambodia",
-            "year": 2015,
-            "x": 528,
-            "y": 288
-        },
-        {
-            "id": 2,
-            "name": "Vietnam",
-            "year": 2016,
-            "x": 528,
-            "y": 275
-        },
-        {
-            "id": 3,
-            "name": "Myanmar",
-            "year": 2016,
-            "x": 505,
-            "y": 270
-        },
-        {
-            "id": 4,
-            "name": "Indonesia",
-            "year": 2017,
-            "x": 540,
-            "y": 340
-        },
-        {
-            "id": 5,
-            "name": "Malaysia",
-            "year": 2017,
-            "x": 520,
-            "y": 310
-        },
-        {
-            "id": 6,
-            "name": "Thailand",
-            "year": 2018,
-            "x": 516,
-            "y": 282
-        }
-    ]
+    {
+      "id": "vn",
+      "name": "Vietnam",
+      "year": 2016,
+      "x": 528,
+      "y": 275
+    },
+    {
+      "id": "mm",
+      "name": "Myanmar",
+      "year": 2016,
+      "x": 505,
+      "y": 270
+    },
+    {
+      "id": "id",
+      "name": "Indonesia",
+      "year": 2017,
+      "x": 540,
+      "y": 340
+    },
+    {
+      "id": "my",
+      "name": "Malaysia",
+      "year": 2017,
+      "x": 520,
+      "y": 310
+    },
+    {
+      "id": "th",
+      "name": "Thailand",
+      "year": 2018,
+      "x": 516,
+      "y": 282
+    },
+    {
+      "id": "kz",
+      "name": "Kazakhstan",
+      "year": 2019,
+      "x": 450,
+      "y": 195
+    },
+    {
+      "id": "uz",
+      "name": "Uzbekistan",
+      "year": 2019,
+      "x": 437,
+      "y": 215
+    },
+    {
+      "id": "kr",
+      "name": "South Korea",
+      "year": 2020,
+      "x": 562,
+      "y": 225
+    },
+    {
+      "id": "ae",
+      "name": "UAE",
+      "year": 2021,
+      "x": 410,
+      "y": 257
+    }
+  ],
+  "world": [
+    {
+      "id": "bg",
+      "name": "Bulgaria",
+      "year": 2012,
+      "x": 346,
+      "y": 209
+    },
+    {
+      "id": "kh",
+      "name": "Cambodia",
+      "year": 2012,
+      "x": 528,
+      "y": 288
+    },
+    {
+      "id": "id",
+      "name": "Indonesia",
+      "year": 2012,
+      "x": 540,
+      "y": 340
+    },
+    {
+      "id": "kz",
+      "name": "Kazakhstan",
+      "year": 2012,
+      "x": 450,
+      "y": 195
+    },
+    {
+      "id": "kg",
+      "name": "Kyrgyzstan",
+      "year": 2012,
+      "x": 457,
+      "y": 212
+    },
+    {
+      "id": "my",
+      "name": "Malaysia",
+      "year": 2012,
+      "x": 520,
+      "y": 310
+    },
+    {
+      "id": "md",
+      "name": "Moldova",
+      "year": 2012,
+      "x": 352,
+      "y": 193
+    },
+    {
+      "id": "mm",
+      "name": "Myanmar",
+      "year": 2012,
+      "x": 505,
+      "y": 270
+    },
+    {
+      "id": "ro",
+      "name": "Romania",
+      "year": 2012,
+      "x": 344,
+      "y": 201
+    },
+    {
+      "id": "kr",
+      "name": "South Korea",
+      "year": 2012,
+      "x": 562,
+      "y": 225
+    },
+    {
+      "id": "th",
+      "name": "Thailand",
+      "year": 2012,
+      "x": 516,
+      "y": 282
+    },
+    {
+      "id": "ua",
+      "name": "Ukraine",
+      "year": 2012,
+      "x": 359,
+      "y": 190
+    },
+    {
+      "id": "ae",
+      "name": "UAE",
+      "year": 2012,
+      "x": 410,
+      "y": 257
+    },
+    {
+      "id": "uz",
+      "name": "Uzbekistan",
+      "year": 2012,
+      "x": 437,
+      "y": 215
+    },
+    {
+      "id": "vn",
+      "name": "Vietnam",
+      "year": 2012,
+      "x": 528,
+      "y": 275
+    }
+  ]
 }

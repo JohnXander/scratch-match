@@ -9,11 +9,13 @@ import {
 
 import './App.css';
 
+import PinAdd from './components/PinAdd';
 import PinList from './components/PinList';
 
 export default function App() {
   const [countries, setCountries] = useState([])
   const [user, setUser] = useState([])
+  const [world, setWorld] = useState([])
 
   useEffect(() => {
     if (!countries.length ) {
@@ -24,6 +26,10 @@ export default function App() {
       fetch("http://localhost:4000/user")
         .then(resp => resp.json())
         .then(data => setUser(data))
+      
+      fetch("http://localhost:4000/world")
+        .then(resp => resp.json())
+        .then(data => setWorld(data))
     }
   }, [countries])
 
@@ -31,17 +37,28 @@ export default function App() {
     <Router>
       <header>
         <h1>🌎Scratch Match</h1>
-        <Link to="/pins">My Scratch Map</Link>
+        <Link to="/map">My Scratch Map</Link>
+        {" "}
+        <Link to="/add">Add Pins</Link>
       </header>
       <main>
         <Routes>
           <Route
-            path='/pins'
+            path='/map'
             element={
               <PinList
-                countries={countries}
                 user={user}
+                countries={countries}
+              />
+            }
+          />
+          <Route
+            path='/add'
+            element={
+              <PinAdd
+                countries={countries}
                 setCountries={setCountries}
+                world={world}
               />
             }
           />

@@ -1,8 +1,7 @@
-
 import worldMap from "../img/map4.jpg"
 import Pin from "./Pin"
 
-export default function PinList({ countries, user }) {
+export default function PinList({ user, countries }) {
 
   const {firstName, lastName} = user
   
@@ -18,14 +17,13 @@ export default function PinList({ countries, user }) {
             backgroundImage: `url("${worldMap}")`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "700px 600px",
-            borderRadius: "3px"
+            borderRadius: "3px",
           }}
           >
-          {countries.map(country => {
-            const { id } = country
+          {countries.map((country, i) => {
             return (
               <Pin
-                key={id}
+                key={i}
                 country={country}
               />
             )

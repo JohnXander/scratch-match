@@ -2,10 +2,10 @@ import { useState } from "react"
 
 export default function Pin({ country }) {
     const { id, name, year, x, y } = country
-    const [isHovering, setIsHovering] = useState(0)
+    const [isHovering, setIsHovering] = useState("")
 
     const handleMouseEnter = (elementId) => setIsHovering(elementId)
-    const handleMouseLeave = () => setIsHovering(0)
+    const handleMouseLeave = () => setIsHovering("")
 
     return (
         <li
@@ -17,7 +17,7 @@ export default function Pin({ country }) {
                 height: "0.5rem",
                 width: "0.5rem",
                 borderRadius: "50%",
-                cursor: "pointer"
+                cursor: "pointer",
             }}
             onMouseEnter={() => handleMouseEnter(id)}
             onMouseLeave={() => handleMouseLeave(id)}
