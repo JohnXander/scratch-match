@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,14 +8,15 @@ import {
 
 import './App.css';
 
-import PinAdd from './components/PinAdd';
 import PinList from './components/PinList';
+import PinManage from './components/PinManage';
 
 export default function App() {
   const [countries, setCountries] = useState([])
   const [user, setUser] = useState([])
   const [world, setWorld] = useState([])
-  const [addNotify, setAddNotify] = useState("")
+  const [notify, setNotify] = useState("")
+  const [action, setAction] = useState("")
 
   useEffect(() => {
     if (!countries.length ) {
@@ -34,19 +34,20 @@ export default function App() {
     }
   }, [countries])
 
-  const setNotification = (country) => {
-    setAddNotify(country)
-    setTimeout(() => setAddNotify(""), 5000)
+  const setNotification = (country, verb) => {
+    setNotify(country)
+    setAction(verb)
+    setTimeout(() => setNotify(""), 3000)
   }
 
   return (
     <Router>
-      <header>
+      <header style={{height: "100px"}}>
         <h1>🌎Scratch Match</h1>
         <Link to="/map">My Scratch Map</Link>
         {" "}
-        <Link to="/add">Add Pins</Link>
-        {addNotify && <p>{addNotify} was added!</p>}
+        <Link to="/manage">Manage Pins</Link>
+        {notify && <p>{notify} was {action}!</p>}
       </header>
       <main>
         <Routes>
@@ -60,9 +61,9 @@ export default function App() {
             }
           />
           <Route
-            path='/add'
+            path='/manage'
             element={
-              <PinAdd
+              <PinManage
                 countries={countries}
                 setCountries={setCountries}
                 world={world}

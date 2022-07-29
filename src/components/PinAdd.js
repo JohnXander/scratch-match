@@ -1,14 +1,14 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function PinAdd({ countries, setCountries, world, setNotification }){ 
-    const [newPin, setNewPin] = useState({name: 'Bulgaria', year: '2012'})
+export default function PinAdd(props) {
+    const { countries, setCountries, world, setNotification } = props
+    const initialVal = { name: world[0].name, year: world[0].year}
+    const [newPin, setNewPin] = useState(initialVal)
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        console.log(newPin)
 
         const selected = world.find(x => x.name === newPin.name)
         selected.year = newPin.year
@@ -21,9 +21,8 @@ export default function PinAdd({ countries, setCountries, world, setNotification
             },
             body: JSON.stringify(selected)
         })
-            .then(resp => resp.json())
             .then(_ => {
-                setNotification(newPin.name)
+                setNotification(newPin.name, "added")
                 setCountries(updatedCountries)
             })
         
