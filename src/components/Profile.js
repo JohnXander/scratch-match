@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom"
 
+import male from "../img/male.jpg"
+import female from "../img/female.jpg"
+
 export default function Profile({ user, setUser, countries }) {
-    const noUser = {firstName: "", lastName: ""}
+    const noUser = {firstName: "", lastName: "", gender: "male"}
     const navigate = useNavigate()
 
     const handleClick = (e) => {
@@ -22,7 +25,11 @@ export default function Profile({ user, setUser, countries }) {
     return (
         <div className="form-container">
             <div className="add-form">
-                <h2>Profile</h2>
+                <img
+                    style={{borderRadius: "50%"}}
+                    src={user.gender === "male" ? male : female}
+                    alt="Profile Pic"
+                />
 
                 <div>
                     <label>First Name</label>

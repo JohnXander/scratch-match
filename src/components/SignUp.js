@@ -44,6 +44,18 @@ export default function SignUp({ user, setUser }) {
                 </div>
 
                 <div>
+                    <label>Gender</label>
+                    <select
+                        onChange={e => setNewUser({...newUser, gender: e.target.value})}
+                        style={{ width: "240px" }}
+                        required
+                    >
+                        <option value={"male"}>Male</option>
+                        <option value={"female"}>Female</option>
+                    </select>
+                </div>
+
+                <div>
                     <button type="submit">Sign Up</button>
                 </div>
             </form>
