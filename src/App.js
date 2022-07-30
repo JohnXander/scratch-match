@@ -45,17 +45,19 @@ export default function App() {
   return (
     <Router>
       <header>
-        <h1>🌎Scratch Match</h1>
-        <div className='nav-bar'>
-          {user.firstName !== "" && <Link to="/map">Scratch Map</Link>}
-          {" "}
-          {user.firstName !== "" && <Link to="/manage">Manage Pins</Link>}
-          {" "}
-          {user.firstName === "" && <Link to="/signup">Sign Up</Link>}
-          {user.firstName !== "" && <Link to="/profile">Profile</Link>}
-        </div>
-        <div className='notify'>
-          {notify && <p className='notification'>{notify} was {action}!</p>}
+        <div>
+          <h1>🌎Scratch Match</h1>
+          <div className='nav-bar'>
+            {user.firstName !== "" && <Link to="/map">Scratch Map</Link>}
+            {" "}
+            {user.firstName !== "" && <Link to="/manage">Manage Pins</Link>}
+            {" "}
+            {user.firstName === "" && <Link to="/signup">Sign Up</Link>}
+            {user.firstName !== "" && <Link to="/profile">Profile</Link>}
+          </div>
+          <div className='notify'>
+            {notify && <p className='notification'>{notify} was {action}!</p>}
+          </div>
         </div>
       </header>
       <main>

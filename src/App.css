@@ -4,12 +4,19 @@
     background-color: royalblue;
     position: absolute;
     z-index: 2;
+    top: 0;
+    left: 0;
     padding: 0.5rem 1rem;
-    margin: 0.5rem 1rem;
+    margin: 1rem;
     border-radius: 3px;
 }
 
 /* Navigation */
+
+header{
+    display: flex;
+    justify-content: center;
+}
 
 header h1{
     margin: 1rem 0 0.5rem 1rem;
@@ -41,6 +48,7 @@ header h1{
 .pins-list{
     list-style-type: none;
     position: relative;
+    min-width: 700px;
     width: 700px;
     height: 500px;
 }
@@ -84,6 +92,10 @@ header h1{
     padding: 2rem 5rem;
     border-radius: 3px;
 }
+
+
+
+
 
 
 
