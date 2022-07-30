@@ -1,4 +1,4 @@
-# 🌎 Scratch Match
+# Scratch Match 🌎
 
 - Create a scratch map of your trips abroad 🗺️ <br>
 - Match your experiences with other travel lovers 🧳 <br>
