@@ -1,4 +1,4 @@
-import worldMap from "../img/map4.jpg"
+import worldMap from "../img/map.jpg"
 import Pin from "./Pin"
 
 export default function PinList({ user, countries }) {

@@ -42,8 +42,6 @@ export default function App() {
     setTimeout(() => setNotify(""), 3000)
   }
 
-  console.log("Hi", user.firstName !== "")
-
   return (
     <Router>
       <header>

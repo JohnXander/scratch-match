@@ -1,23 +1,9 @@
 {
   "user": {
-    "firstName": "John",
-    "lastName": "Xander"
+    "firstName": "",
+    "lastName": ""
   },
   "countries": [
-    {
-      "id": "id",
-      "name": "Indonesia",
-      "year": "2017",
-      "x": 540,
-      "y": 340
-    },
-    {
-      "id": "kz",
-      "name": "Kazakhstan",
-      "year": "2019",
-      "x": 450,
-      "y": 195
-    },
     {
       "id": "th",
       "name": "Thailand",
