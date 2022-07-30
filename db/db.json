@@ -5,25 +5,32 @@
   },
   "countries": [
     {
-      "id": "kh",
-      "name": "Cambodia",
-      "year": "2015",
-      "x": 528,
-      "y": 288
+      "id": "bg",
+      "name": "Bulgaria",
+      "year": 2012,
+      "x": 346,
+      "y": 209
     },
     {
-      "id": "ro",
-      "name": "Romania",
-      "year": "2018",
-      "x": 344,
-      "y": 201
+      "id": "hr",
+      "name": "Croatia",
+      "year": "2021",
+      "x": 325,
+      "y": 203
     },
     {
-      "id": "ma",
-      "name": "Morocco",
-      "year": "2022",
-      "x": 282,
-      "y": 234
+      "id": "id",
+      "name": "Indonesia",
+      "year": "2017",
+      "x": 540,
+      "y": 340
+    },
+    {
+      "id": "kz",
+      "name": "Kazakhstan",
+      "year": "2019",
+      "x": 450,
+      "y": 195
     }
   ],
   "world": [

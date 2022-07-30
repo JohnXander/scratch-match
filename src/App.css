@@ -5,11 +5,20 @@
     justify-content: space-around;
 }
 
-.notify{
+.notification{
+    background-color: royalblue;
+    position: absolute;
+    z-index: 2;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+/* .notify{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* My Scratch Map */
 

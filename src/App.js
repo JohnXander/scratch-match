@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <Router>
-      <header style={{height: "125px"}}>
+      <header>
         <h1>🌎Scratch Match</h1>
         <div className='nav-bar'>
           <Link to="/map">Scratch Map</Link>
@@ -53,7 +53,7 @@ export default function App() {
           <Link to="/signup">Sign Up</Link>
         </div>
         <div className='notify'>
-          {notify && <p>{notify} was {action}!</p>}
+          {notify && <p className='notification'>{notify} was {action}!</p>}
         </div>
       </header>
       <main>

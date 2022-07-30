@@ -10,23 +10,31 @@ export default function PinAdd(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const selected = world.find(x => x.name === newPin.name)
-        selected.year = newPin.year
-        const updatedCountries = [...countries, selected]
+        const { name, year } = newPin
+        const alreadyExists = countries.find(x => x.name === name)
 
-        fetch("http://localhost:4000/countries", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(selected)
-        })
-            .then(_ => {
-                setNotification(newPin.name, "added")
-                setCountries(updatedCountries)
+        if (alreadyExists !== undefined) {
+            setNotification(name, "already added")
+        } else {
+            const selected = world.find(x => x.name === name)
+            selected.year = year
+            const updatedCountries = [...countries, selected]
+
+            fetch("http://localhost:4000/countries", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(selected)
             })
-        
-        navigate("/map")
+                .then(_ => {
+                    setNotification(name, "added")
+                    setCountries(updatedCountries)
+                })
+            
+            navigate("/map")
+        }
+
     }
     
     return (
