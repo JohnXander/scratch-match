@@ -8,6 +8,7 @@ import {
 
 import './App.css';
 
+import Profile from './components/Profile';
 import PinList from './components/PinList';
 import PinManage from './components/PinManage';
 import SignUp from './components/SignUp';
@@ -41,16 +42,19 @@ export default function App() {
     setTimeout(() => setNotify(""), 3000)
   }
 
+  console.log("Hi", user.firstName !== "")
+
   return (
     <Router>
       <header>
         <h1>🌎Scratch Match</h1>
         <div className='nav-bar'>
-          <Link to="/map">Scratch Map</Link>
+          {user.firstName !== "" && <Link to="/map">Scratch Map</Link>}
           {" "}
-          <Link to="/manage">Manage Pins</Link>
+          {user.firstName !== "" && <Link to="/manage">Manage Pins</Link>}
           {" "}
-          <Link to="/signup">Sign Up</Link>
+          {user.firstName === "" && <Link to="/signup">Sign Up</Link>}
+          {user.firstName !== "" && <Link to="/profile">Profile</Link>}
         </div>
         <div className='notify'>
           {notify && <p className='notification'>{notify} was {action}!</p>}
@@ -58,22 +62,36 @@ export default function App() {
       </header>
       <main>
         <Routes>
-          <Route
-            path='/signup'
-            element={<SignUp
-              user={user}
-              setUser={setUser}
-            />}
-          />
-          <Route
-            path='/map'
-            element={
-              <PinList
+          {user.firstName === "" &&
+            <Route
+              path='/signup'
+              element={<SignUp
                 user={user}
-                countries={countries}
-              />
-            }
-          />
+                setUser={setUser}
+              />}
+            />}
+          {user.firstName !== "" &&
+            <Route
+              path='/profile'
+              element={
+                <Profile
+                  user={user}
+                  setUser={setUser}
+                  countries={countries}
+                />
+              }
+            />}
+          {user.firstName !== "" &&
+            <Route
+              path='/map'
+              element={
+                <PinList
+                  user={user}
+                  countries={countries}
+                />
+              }
+            />}
+          {user.firstName !== "" &&
           <Route
             path='/manage'
             element={
@@ -84,7 +102,7 @@ export default function App() {
                 setNotification={setNotification}
               />
             }
-          />
+          />}
         </Routes>
       </main>
     </Router>

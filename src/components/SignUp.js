@@ -23,7 +23,7 @@ export default function SignUp({ user, setUser }) {
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit} className="add-form">
-                <h2>Become a member</h2>
+                <h2>Join Scratch Match</h2>
 
                 <div>
                     <label htmlFor="name">First Name</label>

@@ -14,12 +14,6 @@
     border-radius: 3px;
 }
 
-/* .notify{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 /* My Scratch Map */
 
 .map-container,
@@ -64,7 +58,8 @@
     text-align: center;
 }
 
-.form-container div{
+.form-container div,
+.profile div{
     display: flex;
     align-items: center;
     column-gap: 1rem;
@@ -81,6 +76,8 @@
     padding: 2rem 5rem;
     border-radius: 3px;
 }
+
+
 
 
 
