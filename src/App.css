@@ -21,6 +21,7 @@ header{
 
 header h1{
     margin: 1rem 0 0.5rem 1rem;
+    text-align: center;
 }
 
 .nav-bar{
@@ -28,6 +29,7 @@ header h1{
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1rem;
+    width: 700px;
 }
 
 /* My Scratch Map */

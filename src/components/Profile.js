@@ -7,6 +7,8 @@ export default function Profile({ user, setUser, countries }) {
     const noUser = {firstName: "", lastName: "", gender: "male"}
     const navigate = useNavigate()
 
+    if (countries.length > 0) countries.sort((a, b) => a.year - b.year)
+
     const handleClick = (e) => {
         e.preventDefault()
 
@@ -60,6 +62,22 @@ export default function Profile({ user, setUser, countries }) {
                         disabled
                     />
                 </div>
+
+                {countries.length > 0 && <div>
+                    <label>Travel Trail</label>
+                    <select
+                        style={{ width: "210px" }}>
+                        <option>{countries[0].year} - Present</option>
+                        {countries.map((country, i) => {
+                            const { name, year } = country
+                            return (
+                                <option key={i} value={name} disabled>
+                                    {i + 1}. {name}, {year}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>}
 
                 <div>
                     <button onClick={handleClick}>Sign Out</button>

@@ -14,6 +14,7 @@ import PinManage from './components/PinManage';
 import SignUp from './components/SignUp';
 import Country from './components/Country';
 import Hero from './components/Hero';
+import Friends from './components/Friends';
 
 export default function App() {
   const [countries, setCountries] = useState([])
@@ -56,6 +57,7 @@ export default function App() {
             {" "}
             {user.firstName === "" && <Link to="/signup">Sign Up</Link>}
             {user.firstName !== "" && <Link to="/profile">Profile</Link>}
+            {user.firstName !== "" && <Link to="/friends">Friends</Link>}
           </div>
           <div className='notify'>
             {notify && <p className='notification'>{notify} was {action}!</p>}
@@ -105,6 +107,15 @@ export default function App() {
                 setNotification={setNotification}
               />
             }
+            />}
+          {user.firstName !== "" &&
+            <Route
+              path='/friends'
+              element={
+                <Friends
+                  
+                />
+              }
             />}
            {user.firstName !== "" &&
           <Route
