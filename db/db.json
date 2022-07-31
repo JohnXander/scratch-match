@@ -11,175 +11,200 @@
       "name": "Bulgaria",
       "year": 2012,
       "x": 346,
-      "y": 209
+      "y": 209,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/1200px-Flag_of_Bulgaria.svg.png"
     },
     {
       "id": "kh",
       "name": "Cambodia",
       "year": 2012,
       "x": 528,
-      "y": 288
+      "y": 288,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/1200px-Flag_of_Cambodia.svg.png"
     },
     {
       "id": "hr",
       "name": "Croatia",
       "year": 2012,
       "x": 325,
-      "y": 203
+      "y": 203,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/1280px-Flag_of_Croatia.svg.png"
     },
     {
       "id": "eg",
       "name": "Egypt",
       "year": 2012,
       "x": 363,
-      "y": 245
+      "y": 245,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png?20220227110228"
     },
     {
       "id": "fr",
       "name": "France",
       "year": 2012,
       "x": 296,
-      "y": 196
+      "y": 196,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Flag_of_France_%28lighter_variant%29.svg/250px-Flag_of_France_%28lighter_variant%29.svg.png"
     },
     {
       "id": "gr",
       "name": "Greece",
       "year": 2012,
       "x": 342,
-      "y": 223
+      "y": 223,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/2560px-Flag_of_Greece.svg.png"
     },
     {
       "id": "id",
       "name": "Indonesia",
       "year": 2012,
       "x": 540,
-      "y": 340
+      "y": 340,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/255px-Flag_of_Indonesia.svg.png"
     },
     {
       "id": "it",
       "name": "Italy",
       "year": 2012,
       "x": 322,
-      "y": 210
+      "y": 210,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1500px-Flag_of_Italy.svg.png"
     },
     {
       "id": "kz",
       "name": "Kazakhstan",
       "year": 2012,
       "x": 450,
-      "y": 195
+      "y": 195,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/1024px-Flag_of_Kazakhstan.svg.png"
     },
     {
       "id": "kg",
       "name": "Kyrgyzstan",
       "year": 2012,
       "x": 457,
-      "y": 212
+      "y": 212,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/800px-Flag_of_Kyrgyzstan.svg.png"
     },
     {
       "id": "my",
       "name": "Malaysia",
       "year": 2012,
       "x": 520,
-      "y": 310
+      "y": 310,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Malaysia_%283-2%29.svg/2100px-Flag_of_Malaysia_%283-2%29.svg.png"
     },
     {
       "id": "md",
       "name": "Moldova",
       "year": 2012,
       "x": 352,
-      "y": 193
+      "y": 193,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/2560px-Flag_of_Moldova.svg.png"
     },
     {
       "id": "me",
       "name": "Montenegro",
       "year": 2012,
       "x": 332,
-      "y": 209
+      "y": 209,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/1200px-Flag_of_Montenegro.svg.png"
     },
     {
       "id": "ma",
       "name": "Morocco",
       "year": 2012,
       "x": 282,
-      "y": 234
+      "y": 234,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/2560px-Flag_of_Morocco.svg.png"
     },
     {
       "id": "mm",
       "name": "Myanmar",
       "year": 2012,
       "x": 505,
-      "y": 270
+      "y": 270,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/2560px-Flag_of_Myanmar.svg.png"
     },
     {
       "id": "ro",
       "name": "Romania",
       "year": 2012,
       "x": 344,
-      "y": 201
+      "y": 201,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/2560px-Flag_of_Romania.svg.png"
     },
     {
       "id": "kr",
       "name": "South Korea",
       "year": 2012,
       "x": 562,
-      "y": 225
+      "y": 225,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1280px-Flag_of_South_Korea.svg.png"
     },
     {
       "id": "es",
       "name": "Spain",
       "year": 2012,
       "x": 286,
-      "y": 216
+      "y": 216,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/2560px-Flag_of_Spain.svg.png"
     },
     {
       "id": "th",
       "name": "Thailand",
       "year": 2012,
       "x": 516,
-      "y": 282
+      "y": 282,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Flag_of_Thailand_%28non-standard_colours%29.svg/1024px-Flag_of_Thailand_%28non-standard_colours%29.svg.png"
     },
     {
       "id": "ua",
       "name": "Ukraine",
       "year": 2012,
       "x": 359,
-      "y": 190
+      "y": 190,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/800px-Flag_of_Ukraine.svg.png?20100406171642"
     },
     {
       "id": "ae",
       "name": "UAE",
       "year": 2012,
       "x": 410,
-      "y": 257
+      "y": 257,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/255px-Flag_of_the_United_Arab_Emirates.svg.png"
     },
     {
       "id": "uk",
       "name": "UK",
       "year": 2012,
       "x": 292,
-      "y": 182
+      "y": 182,
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png"
     },
     {
       "id": "us",
       "name": "USA",
       "year": 2012,
       "x": 105,
-      "y": 225
+      "y": 225,
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
     },
     {
       "id": "uz",
       "name": "Uzbekistan",
       "year": 2012,
       "x": 437,
-      "y": 215
+      "y": 215,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/1280px-Flag_of_Uzbekistan.svg.png"
     },
     {
       "id": "vn",
       "name": "Vietnam",
       "year": 2012,
       "x": 528,
-      "y": 275
+      "y": 275,
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png"
     }
   ]
 }

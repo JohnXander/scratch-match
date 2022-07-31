@@ -12,6 +12,7 @@ import Profile from './components/Profile';
 import PinList from './components/PinList';
 import PinManage from './components/PinManage';
 import SignUp from './components/SignUp';
+import Country from './components/Country';
 
 export default function App() {
   const [countries, setCountries] = useState([])
@@ -101,6 +102,13 @@ export default function App() {
                 world={world}
                 setNotification={setNotification}
               />
+            }
+            />}
+           {user.firstName !== "" &&
+          <Route
+            path='/country/:id'
+            element={
+              <Country countries={countries} />
             }
           />}
         </Routes>

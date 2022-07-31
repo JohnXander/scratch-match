@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Pin({ country }) {
     const { id, name, year, x, y } = country
@@ -24,7 +25,14 @@ export default function Pin({ country }) {
             >
             {
                 isHovering === id &&
-                <p className="hover-block">{name}, {year}</p>
+                <p className="hover-block">
+                    <Link
+                        className="pin-link"
+                        to={`/country/${id}`}
+                    >
+                        {name}, {year}
+                    </Link>
+                </p>
             }
         </li>
     )
