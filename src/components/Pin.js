@@ -29,6 +29,7 @@ export default function Pin({ country }) {
                     <Link
                         className="pin-link"
                         to={`/country/${id}`}
+                        state={country}
                     >
                         {name}, {year}
                     </Link>

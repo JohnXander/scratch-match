@@ -1,15 +1,15 @@
-import { useParams } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 
-export default function Country({ countries }) {
-    const { id } = useParams()
-    const selected = countries.filter(x => x.id === id)
+export default function Country() {
+    const location = useLocation()
+    const { name, year, flag } = location.state
 
     return (
         <div className="form-container">
             <div className="add-form">
                 <img
                     className="country-flag"
-                    src={selected[0].flag}
+                    src={flag}
                     alt="Country Flag"
                 />
 
@@ -18,7 +18,7 @@ export default function Country({ countries }) {
                     <input
                         style={{backgroundColor: "white", width: "250px"}}
                         type="text"
-                        defaultValue={selected[0].name}
+                        defaultValue={name}
                         disabled
                     />
                 </div>
@@ -28,7 +28,7 @@ export default function Country({ countries }) {
                     <input
                         style={{backgroundColor: "white"}}
                         type="text"
-                        defaultValue={selected[0].year}
+                        defaultValue={year}
                         disabled
                     />
                 </div>
