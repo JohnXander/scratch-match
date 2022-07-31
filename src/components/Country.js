@@ -4,8 +4,6 @@ export default function Country({ countries }) {
     const { id } = useParams()
     const selected = countries.filter(x => x.id === id)
 
-    console.log("yo", typeof selected[0].name)
-
     return (
         <div className="form-container">
             <div className="add-form">

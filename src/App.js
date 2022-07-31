@@ -13,6 +13,7 @@ import PinList from './components/PinList';
 import PinManage from './components/PinManage';
 import SignUp from './components/SignUp';
 import Country from './components/Country';
+import Hero from './components/Hero';
 
 export default function App() {
   const [countries, setCountries] = useState([])
@@ -63,6 +64,7 @@ export default function App() {
       </header>
       <main>
         <Routes>
+          <Route path="/" element={<Hero />} />
           {user.firstName === "" &&
             <Route
               path='/signup'
