@@ -130,6 +130,8 @@ export default function App() {
                   <FriendList
                     friends={friends}
                     countries={countries}
+                    setFriends={setFriends}
+                    setNotification={setNotification}
                   />
                 }
               />
@@ -151,7 +153,7 @@ export default function App() {
           <Route
             path='/friends/:id'
             element={
-              <FriendProfile />
+              <FriendProfile countries={countries} />
             }
           />}
            {user.firstName !== "" &&

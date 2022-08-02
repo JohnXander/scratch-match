@@ -6,22 +6,6 @@
   },
   "countries": [
     {
-      "id": "fr",
-      "name": "France",
-      "year": "2005",
-      "x": 296,
-      "y": 196,
-      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Flag_of_France_%28lighter_variant%29.svg/250px-Flag_of_France_%28lighter_variant%29.svg.png"
-    },
-    {
-      "id": "kg",
-      "name": "Kyrgyzstan",
-      "year": "2010",
-      "x": 457,
-      "y": 212,
-      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/800px-Flag_of_Kyrgyzstan.svg.png"
-    },
-    {
       "id": "mm",
       "name": "Myanmar",
       "year": "2015",
@@ -471,23 +455,6 @@
           "x": 528,
           "y": 275,
           "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png"
-        }
-      ]
-    },
-    {
-      "id": "jdf1",
-      "firstName": "Jane",
-      "lastName": "Doe",
-      "gender": "female",
-      "visited": 1,
-      "trail": [
-        {
-          "id": "es",
-          "name": "Spain",
-          "year": 2022,
-          "x": 286,
-          "y": 216,
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/2560px-Flag_of_Spain.svg.png"
         }
       ]
     }

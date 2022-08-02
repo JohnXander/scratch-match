@@ -1,10 +1,26 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import male from "../img/male.jpg"
 import female from "../img/female.jpg"
 
 export default function FriendList(props) {
-    const { friends, countries } = props
+    const { friends, countries, setFriends, setNotification } = props
+    const navigate = useNavigate()
+
+    const handleClick = (userId) => {
+        const updatedFriends = friends.filter(x => x.id !== userId)
+
+        fetch(`http://localhost:4000/friends/${userId}`, {
+            method: "DELETE"
+        })
+            .then(_ => {
+                setNotification("Friend", "removed")
+                setFriends(updatedFriends)
+            })
+        
+        navigate("/friends")
+    }
+
     return (
         <ul>
             {friends.map((friend, i) => {
@@ -37,7 +53,7 @@ export default function FriendList(props) {
                             <p>{mutualCountries} mutual country</p> :
                             <p>{mutualCountries} mutual countries</p>}
                     </div>
-                    {/* <button onClick={() => handleClick(id)}>Add Friend</button> */}
+                    <button onClick={() => handleClick(id)}>Remove Friend</button>
                 </li>
             })}
         </ul>
