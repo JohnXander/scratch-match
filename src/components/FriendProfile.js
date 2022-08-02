@@ -5,7 +5,7 @@ import female from "../img/female.jpg"
 
 export default function FriendProfile() {
     const location = useLocation()
-    const { firstName, lastName, gender, visited, trail } = location.state
+    const { firstName, lastName, gender, visited } = location.state
     return (
         <div className="form-container">
             <div className="add-form">
@@ -61,9 +61,6 @@ export default function FriendProfile() {
                     </select>
                 </div>} */}
 
-                <div>
-                    <button>Add Friend</button>
-                </div>
             </div>
         </div>
     )

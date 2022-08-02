@@ -24,6 +24,7 @@ export default function App() {
   const [user, setUser] = useState([])
   const [world, setWorld] = useState([])
   const [people, setPeople] = useState([])
+  const [friends, setFriends] = useState([])
   const [notify, setNotify] = useState("")
   const [action, setAction] = useState("")
 
@@ -44,6 +45,10 @@ export default function App() {
       fetch("http://localhost:4000/people")
         .then(resp => resp.json())
         .then(data => setPeople(data))
+      
+      fetch("http://localhost:4000/friends")
+        .then(resp => resp.json())
+        .then(data => setFriends(data))
     }
   }, [countries])
 
@@ -91,6 +96,7 @@ export default function App() {
                   user={user}
                   setUser={setUser}
                   countries={countries}
+                  friends={friends}
                 />
               }
             />}
@@ -118,10 +124,26 @@ export default function App() {
             />}
           {user.firstName !== "" &&
             <Route path='/friends' element={<Friends />}>
-              <Route path='list' element={<FriendList />} />
+              <Route
+                path='list'
+                element={
+                  <FriendList
+                    friends={friends}
+                    countries={countries}
+                  />
+                }
+              />
               <Route
                 path='suggested'
-                element={<SuggestedFriends people={people}/>}
+                element={
+                  <SuggestedFriends
+                    people={people}
+                    friends={friends}
+                    setFriends={setFriends}
+                    setNotification={setNotification}
+                    countries={countries}
+                  />
+                }
               />
             </Route>
           }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import male from "../img/male.jpg"
 import female from "../img/female.jpg"
 
-export default function Profile({ user, setUser, countries }) {
+export default function Profile({ user, setUser, countries, friends }) {
     const noUser = {firstName: "", lastName: "", gender: "male"}
     const navigate = useNavigate()
 
@@ -78,6 +78,16 @@ export default function Profile({ user, setUser, countries }) {
                         })}
                     </select>
                 </div>}
+
+                <div>
+                    <label>Friends</label>
+                    <input
+                        style={{backgroundColor: "white", width: "240px"}}
+                        type="text"
+                        value={friends.length}
+                        disabled
+                    />
+                </div>
 
                 <div>
                     <button onClick={handleClick}>Sign Out</button>

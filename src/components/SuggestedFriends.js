@@ -1,50 +1,48 @@
-import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 import male from "../img/male.jpg"
 import female from "../img/female.jpg"
 
-export default function SuggestedFriends({ people }) {
-    // const { countries, setCountries, world, setNotification } = props
-    // const initialVal = { name: world[0].name, year: world[0].year}
-    const [newFriend, setNewFriend] = useState()
+export default function SuggestedFriends(props) {
+    const { people, friends, setFriends, setNotification, countries } = props
     const navigate = useNavigate()
 
-    const handleClick = (name) => {
+    const handleClick = (userId) => {
+        const alreadyExists = friends.find(x => x.id === userId)
 
-        console.log("Heeeey", name)
+        if (alreadyExists !== undefined) {
+            setNotification("Friend", "already added")
+        } else {
+            const selected = people.find(x => x.id === userId)
+            const updatedFriends = [...friends, selected]
 
-        // const { name, year } = newPin
-        // const alreadyExists = countries.find(x => x.name === name)
-
-        // if (alreadyExists !== undefined) {
-        //     setNotification(name, "already added")
-        // } else {
-        //     const selected = world.find(x => x.name === name)
-        //     selected.year = year
-        //     const updatedCountries = [...countries, selected]
-
-        //     fetch("http://localhost:4000/countries", {
-        //         method: "POST",
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(selected)
-        //     })
-        //         .then(_ => {
-        //             setNotification(name, "added")
-        //             setCountries(updatedCountries)
-        //         })
+            fetch("http://localhost:4000/friends", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(selected)
+            })
+                .then(_ => {
+                    setNotification("Friend", "added")
+                    setFriends(updatedFriends)
+                })
             
-        //     navigate("/map")
-        // }
-
+            navigate("/friends/list")
+        }
     }
 
     return (
         <ul>
             {people.map((person, i) => {
-                const { id, firstName, lastName, gender, visited } = person
+                const { id, firstName, lastName, gender, trail } = person
+
+                const friendsTrail = trail.map(x => x.id)
+                const myTrail = countries.map(x => x.id)
+                const mutualCountries = myTrail.filter(x => {
+                    return friendsTrail.includes(x)
+                }).length
+
                 return <li key={i} className="listed-friend">
                     <div>
                         <img
@@ -62,9 +60,9 @@ export default function SuggestedFriends({ people }) {
                         >
                             {firstName} {lastName}
                         </Link>
-                        {visited === 1 ?
-                            <p>{visited} country visited</p> :
-                            <p>{visited} countries visited</p>}
+                        {mutualCountries === 1 ?
+                            <p>{mutualCountries} mutual country</p> :
+                            <p>{mutualCountries} mutual countries</p>}
                     </div>
                     <button onClick={() => handleClick(id)}>Add Friend</button>
                 </li>
