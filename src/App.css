@@ -59,7 +59,7 @@ header h1{
 .hover-block{
     position: absolute;
     z-index: 1;
-    background-color: blue;
+    /* background-color: blue; */
     color: #fff;
     font-size: 0.8rem;
     width: fit-content;

@@ -1,12 +1,14 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-export default function Pin({ country }) {
+export default function Pin({ country, mutualCountries }) {
     const { id, name, year, x, y } = country
     const [isHovering, setIsHovering] = useState("")
 
     const handleMouseEnter = (elementId) => setIsHovering(elementId)
     const handleMouseLeave = () => setIsHovering("")
+
+    const isMutual = mutualCountries.includes(id)
 
     return (
         <li
@@ -14,7 +16,7 @@ export default function Pin({ country }) {
                 position: "absolute",
                 left: `${x}px`,
                 top: `${y}px`,
-                backgroundColor: "blue",
+                backgroundColor: isMutual ? "#00D26A" : "blue",
                 height: "0.5rem",
                 width: "0.5rem",
                 borderRadius: "50%",
@@ -25,7 +27,7 @@ export default function Pin({ country }) {
             >
             {
                 isHovering === id &&
-                <p className="hover-block">
+                <p className="hover-block" style={{backgroundColor: isMutual ? "#00D26A" : "blue"}}>
                     <Link
                         className="pin-link"
                         to={`/country/${id}`}

@@ -83,9 +83,10 @@ export default function App() {
           {user.firstName === "" &&
             <Route
               path='/signup'
-              element={<SignUp
-                user={user}
-                setUser={setUser}
+              element={
+                <SignUp
+                  user={user}
+                  setUser={setUser}
               />}
             />}
           {user.firstName !== "" &&
@@ -107,6 +108,7 @@ export default function App() {
                 <PinList
                   user={user}
                   countries={countries}
+                  friends={friends}
                 />
               }
             />}

@@ -1,10 +1,17 @@
 import worldMap from "../img/map.jpg"
 import Pin from "./Pin"
 
-export default function PinList({ user, countries }) {
-
-  const {firstName, lastName} = user
+export default function PinList({ user, countries, friends }) {
   
+  const { firstName, lastName } = user
+  
+  const friendsTrails = friends.map(x => x.trail).flat(1)
+  const friendsCountries = [...new Set(friendsTrails.map(x => x.id))]
+  const myCountries = countries.map(x => x.id)
+  const mutualCountries = myCountries.filter(x => {
+    return friendsCountries.includes(x)
+  })
+
   return (
     <>
       <header>
@@ -25,6 +32,7 @@ export default function PinList({ user, countries }) {
               <Pin
                 key={i}
                 country={country}
+                mutualCountries={mutualCountries}
               />
             )
           })}

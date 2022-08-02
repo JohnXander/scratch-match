@@ -14,6 +14,7 @@ export default function SuggestedFriends(props) {
             setNotification("Friend", "already added")
         } else {
             const selected = people.find(x => x.id === userId)
+            selected.isFriend = true
             const updatedFriends = [...friends, selected]
 
             fetch("http://localhost:4000/friends", {
