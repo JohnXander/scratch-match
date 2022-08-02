@@ -29,7 +29,7 @@ header h1{
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1rem;
-    width: 700px;
+    width: 500px;
 }
 
 /* My Scratch Map */
@@ -112,6 +112,27 @@ header h1{
     height: 200px;
     object-fit: contain;
     border-radius: 3px;
+}
+
+/* Friends */
+
+.listed-friend{
+    list-style-type: none;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.listed-friend div p {
+    margin-top: 1rem;
+}
+
+.listed-friend button {
+    margin: 1rem;
+}
+
+.friend-link{
+    text-decoration: none;
 }
 
 

@@ -15,11 +15,15 @@ import SignUp from './components/SignUp';
 import Country from './components/Country';
 import Hero from './components/Hero';
 import Friends from './components/Friends';
+import FriendList from './components/FriendList';
+import SuggestedFriends from './components/SuggestedFriends';
+import FriendProfile from './components/FriendProfile';
 
 export default function App() {
   const [countries, setCountries] = useState([])
   const [user, setUser] = useState([])
   const [world, setWorld] = useState([])
+  const [people, setPeople] = useState([])
   const [notify, setNotify] = useState("")
   const [action, setAction] = useState("")
 
@@ -36,6 +40,10 @@ export default function App() {
       fetch("http://localhost:4000/world")
         .then(resp => resp.json())
         .then(data => setWorld(data))
+      
+      fetch("http://localhost:4000/people")
+        .then(resp => resp.json())
+        .then(data => setPeople(data))
     }
   }, [countries])
 
@@ -109,14 +117,21 @@ export default function App() {
             }
             />}
           {user.firstName !== "" &&
-            <Route
-              path='/friends'
-              element={
-                <Friends
-                  
-                />
-              }
-            />}
+            <Route path='/friends' element={<Friends />}>
+              <Route path='list' element={<FriendList />} />
+              <Route
+                path='suggested'
+                element={<SuggestedFriends people={people}/>}
+              />
+            </Route>
+          }
+          {user.firstName !== "" &&
+          <Route
+            path='/friends/:id'
+            element={
+              <FriendProfile />
+            }
+          />}
            {user.firstName !== "" &&
           <Route
             path='/country/:id'
