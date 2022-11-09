@@ -30,23 +30,23 @@ export default function App() {
 
   useEffect(() => {
     if (!countries.length) {
-      fetch("http://localhost:4000/countries")
+      fetch("https://scratch-match.netlify.app/countries")
         .then(resp => resp.json())
         .then(data => setCountries(data))
-      
-      fetch("http://localhost:4000/user")
+
+      fetch("https://scratch-match.netlify.app/user")
         .then(resp => resp.json())
         .then(data => setUser(data))
-      
-      fetch("http://localhost:4000/world")
+
+      fetch("https://scratch-match.netlify.app/world")
         .then(resp => resp.json())
         .then(data => setWorld(data))
-      
-      fetch("http://localhost:4000/people")
+
+      fetch("https://scratch-match.netlify.app/people")
         .then(resp => resp.json())
         .then(data => setPeople(data))
-      
-      fetch("http://localhost:4000/friends")
+
+      fetch("https://scratch-match.netlify.app/friends")
         .then(resp => resp.json())
         .then(data => setFriends(data))
     }
@@ -70,7 +70,7 @@ export default function App() {
             {" "}
             {user.firstName === "" && <Link to="/signup">Sign Up</Link>}
             {user.firstName !== "" && <Link to="/profile">Profile</Link>}
-            {user.firstName !== "" && <Link to="/friends">Friends</Link>}
+            {user.firstName !== "" && <Link to="/friends/list">Friends</Link>}
           </div>
           <div className='notify'>
             {notify && <p className='notification'>{notify} was {action}!</p>}
@@ -87,7 +87,7 @@ export default function App() {
                 <SignUp
                   user={user}
                   setUser={setUser}
-              />}
+                />}
             />}
           {user.firstName !== "" &&
             <Route
@@ -113,16 +113,16 @@ export default function App() {
               }
             />}
           {user.firstName !== "" &&
-          <Route
-            path='/manage'
-            element={
-              <PinManage
-                countries={countries}
-                setCountries={setCountries}
-                world={world}
-                setNotification={setNotification}
-              />
-            }
+            <Route
+              path='/manage'
+              element={
+                <PinManage
+                  countries={countries}
+                  setCountries={setCountries}
+                  world={world}
+                  setNotification={setNotification}
+                />
+              }
             />}
           {user.firstName !== "" &&
             <Route path='/friends' element={<Friends />}>
@@ -152,19 +152,19 @@ export default function App() {
             </Route>
           }
           {user.firstName !== "" &&
-          <Route
-            path='/friends/:id'
-            element={
-              <FriendProfile countries={countries} />
-            }
-          />}
-           {user.firstName !== "" &&
-          <Route
-            path='/country/:id'
-            element={
-              <Country countries={countries} />
-            }
-          />}
+            <Route
+              path='/friends/:id'
+              element={
+                <FriendProfile countries={countries} />
+              }
+            />}
+          {user.firstName !== "" &&
+            <Route
+              path='/country/:id'
+              element={
+                <Country friends={friends} />
+              }
+            />}
         </Routes>
       </main>
     </Router>

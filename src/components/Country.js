@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 
-export default function Country() {
+export default function Country({ friends }) {
     const location = useLocation()
     const { name, year, flag } = location.state
 
