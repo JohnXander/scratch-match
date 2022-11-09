@@ -30,23 +30,23 @@ export default function App() {
 
   useEffect(() => {
     if (!countries.length) {
-      fetch("https://scratch-match.netlify.app/countries")
+      fetch("http://localhost:4000/countries")
         .then(resp => resp.json())
         .then(data => setCountries(data))
 
-      fetch("https://scratch-match.netlify.app/user")
+      fetch("http://localhost:4000/user")
         .then(resp => resp.json())
         .then(data => setUser(data))
 
-      fetch("https://scratch-match.netlify.app/world")
+      fetch("http://localhost:4000/world")
         .then(resp => resp.json())
         .then(data => setWorld(data))
 
-      fetch("https://scratch-match.netlify.app/people")
+      fetch("http://localhost:4000/people")
         .then(resp => resp.json())
         .then(data => setPeople(data))
 
-      fetch("https://scratch-match.netlify.app/friends")
+      fetch("http://localhost:4000/friends")
         .then(resp => resp.json())
         .then(data => setFriends(data))
     }
